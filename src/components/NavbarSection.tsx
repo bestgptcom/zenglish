@@ -34,7 +34,7 @@ export default function NavbarSection() {
               endContent={
                 <BsFillArrowRightCircleFill className="text-white size-4 sm:size-5" />
               }
-              className="font-semibold font-rethink bg-black text-sm sm:text-base min-h-9 h-9 sm:min-h-10 sm:h-10"
+              className="font-semibold font-rethink bg-black text-sm sm:text-base min-h-9 h-9 sm:min-h-10 sm:h-10 hover:opacity-70"
             >
               Start Training
             </Button>
