@@ -158,8 +158,8 @@ export default function FeatureSection() {
                 variant="bordered"
                 radius="full"
                 color="primary"
-                endContent={<BsArrowRightCircle className="t" size={20} />}
-                className="font-semibold font-rethink bg-white border-1 border-[#11111612] text-black mb-10"
+                endContent={<BsArrowRightCircle className="t group-hover:translate-x-1 transition duration-300" size={20} />}
+                className="font-semibold font-rethink bg-white border-1 border-[#11111612] text-black mb-10 group hover:bg-gray-100"
               >
                 Get Started Now
               </Button>
@@ -193,8 +193,8 @@ export default function FeatureSection() {
                 variant="bordered"
                 radius="full"
                 color="primary"
-                endContent={<BsArrowRightCircle className="t" size={20} />}
-                className="font-semibold font-rethink bg-white border-1 border-[#11111612] text-black mb-10"
+                endContent={<BsArrowRightCircle className="t group-hover:translate-x-1 transition duration-300" size={20} />}
+                className="font-semibold font-rethink bg-white border-1 border-[#11111612] text-black mb-10 group hover:bg-gray-100"
               >
                 Get Started Now
               </Button>
