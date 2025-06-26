@@ -26,7 +26,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Zenglish - Learn Languages Without Pressure",
+  title: "Zenglish - Calm Language Learning with AI",
   description: "Zenglish blends AI + an innovative training method, so you speak from day one—calm, confident, judgement-free.",
   keywords: "language learning, AI tutor, stress-free learning, conversation practice, Duolingo alternative",
   authors: [{ name: "Zenglish Team" }],
@@ -39,14 +39,14 @@ export const metadata = {
     locale: "en_US",
     url: "https://splendorous-pothos-bb289a.netlify.app",
     siteName: "Zenglish",
-    title: "Zenglish - Learn Languages Without Pressure",
+    title: "Zenglish - Calm Language Learning with AI",
     description: "Zenglish blends AI + an innovative training method, so you speak from day one—calm, confident, judgement-free.",
     images: [
       {
         url: "https://splendorous-pothos-bb289a.netlify.app/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Zenglish - Learn Languages Without Pressure",
+        alt: "Zenglish - Calm Language Learning with AI",
       },
     ],
   },
@@ -56,7 +56,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@zenglish",
     creator: "@zenglish",
-    title: "Zenglish - Learn Languages Without Pressure",
+    title: "Zenglish - Calm Language Learning with AI",
     description: "Zenglish blends AI + an innovative training method, so you speak from day one—calm, confident, judgement-free.",
     images: ["https://splendorous-pothos-bb289a.netlify.app/images/og-image.png"],
   },
