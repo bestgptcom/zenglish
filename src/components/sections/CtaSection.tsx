@@ -23,16 +23,25 @@ export default function CtaSection() {
               radius="full"
               color="primary"
               endContent={
-                <BsFillArrowRightCircleFill className="text-[#7A32E4]" size={20} />
+                <BsFillArrowRightCircleFill
+                  className="text-[#7A32E4] group-hover:translate-x-1 transition duration-300"
+                  size={20}
+                />
               }
-              className="font-semibold font-rethink bg-white text-black md:mb-10"
+              className="font-semibold font-rethink bg-white text-black md:mb-10 group hover:bg-gray-100"
             >
               Get Early Access
             </Button>
           </div>
         </div>
         <div className="flex flex-col gap-4 mx-auto">
-          <Image src="/images/cta-img.png" alt="cta-img" width={432} height={894} className="mt-auto mx-auto w-full max-w-md" />
+          <Image
+            src="/images/cta-img.png"
+            alt="cta-img"
+            width={432}
+            height={894}
+            className="mt-auto mx-auto w-full max-w-md"
+          />
         </div>
       </div>
     </div>
