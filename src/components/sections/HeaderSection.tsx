@@ -17,7 +17,11 @@ export default function HeaderSection() {
               </p>
               <div className="flex items-center justify-center gap-2">
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <AiFillStar key={index} color="#3CC057" className="size-4 sm:size-5 md:size-6" />
+                  <AiFillStar
+                    key={index}
+                    color="#3CC057"
+                    className="size-4 sm:size-5 md:size-6"
+                  />
                 ))}
               </div>
             </div>
@@ -29,18 +33,21 @@ export default function HeaderSection() {
             Learn a new language without the pressure.
           </h1>
           <p className="max-w-xl mx-auto text-center mb-10 font-satoshi md:text-md lg:text-lg font-medium">
-            Zenglish blends AI + an innovative training method, so you speak from
-            day one—calm, confident, judgement-free.
+            Zenglish blends AI + an innovative training method, so you speak
+            from day one—calm, confident, judgement-free.
           </p>
-  
+
           <Button
             variant="solid"
             radius="full"
             color="primary"
             endContent={
-              <BsFillArrowRightCircleFill className="text-white" size={20} />
+              <BsFillArrowRightCircleFill
+                className="text-white group-hover:translate-x-1 transition duration-300"
+                size={20}
+              />
             }
-            className="font-semibold font-rethink bg-black mb-10"
+            className="font-semibold font-rethink bg-black mb-10 group"
           >
             Get Early Access
           </Button>
@@ -54,11 +61,29 @@ export default function HeaderSection() {
         </div>
         <div className="absolute left-[252px] top-[130px] w-[454px] h-[454px] bg-[#5F09DE] opacity-80 blur-[300px] rounded-[2000px] z-0"></div>
         <div className="absolute left-[1099px] top-[-123px] w-[682px] h-[682px] bg-[#5F09DE] opacity-80 blur-[300px] rounded-[2000px] z-0"></div>
-        <Image src="/images/bolt-stamp.png" alt="Made by Bolt" width={200} height={200} className="size-16 sm:size-28 md:size-32 lg:size-36 absolute right-4 sm:right-10 bottom-10 sm:bottom-40 z-40" />
+        <Image
+          src="/images/bolt-stamp.png"
+          alt="Made by Bolt"
+          width={200}
+          height={200}
+          className="size-16 sm:size-28 md:size-32 lg:size-36 absolute right-4 sm:right-10 bottom-10 sm:bottom-40 z-40"
+        />
       </div>
-        <div className="absolute left-0 bottom-0 w-full h-48 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <Image src="/images/hero-cloud-left.png" alt="cloud" width={972} height={906} className="w-[400px] sm:w-[972px] h-auto absolute left-0 top-40 sm:top-0" />
-        <Image src="/images/hero-cloud-right.png" alt="cloud" width={835} height={906} className="w-[400px] sm:w-[835px] h-auto absolute right-0 top-40 sm:top-0" />
+      <div className="absolute left-0 bottom-0 w-full h-48 bg-gradient-to-t from-white to-transparent z-10"></div>
+      <Image
+        src="/images/hero-cloud-left.png"
+        alt="cloud"
+        width={972}
+        height={906}
+        className="w-[400px] sm:w-[972px] h-auto absolute left-0 top-40 sm:top-0"
+      />
+      <Image
+        src="/images/hero-cloud-right.png"
+        alt="cloud"
+        width={835}
+        height={906}
+        className="w-[400px] sm:w-[835px] h-auto absolute right-0 top-40 sm:top-0"
+      />
     </div>
   );
 }
