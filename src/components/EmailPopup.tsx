@@ -74,7 +74,7 @@ export default function EmailPopup({ isOpen, onClose }: EmailPopupProps) {
               Get Early Access
             </h2>
           ) : (
-            <h2 className="font-geist text-2xl font-medium text-green-600">
+            <h2 className="font-geist text-2xl font-medium text-gray-600">
               Thank You!
             </h2>
           )}
