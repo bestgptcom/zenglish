@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Button,
   Input,
@@ -21,6 +21,23 @@ export default function EmailPopup({ isOpen, onClose }: EmailPopupProps) {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleClose = () => {
+    setIsSubmitted(false);
+    setEmail("");
+    onClose();
+  };
+
+  // Auto-close the modal after 3 seconds when submitted
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        handleClose();
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,12 +63,6 @@ export default function EmailPopup({ isOpen, onClose }: EmailPopupProps) {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleClose = () => {
-    setIsSubmitted(false);
-    setEmail("");
-    onClose();
   };
 
   return (
