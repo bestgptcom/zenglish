@@ -1,10 +1,15 @@
+"use client";
+
 import { AiFillStar } from "react-icons/ai";
 import Image from "next/image";
 import { LeftLongLeaf } from "../Icon";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { Button } from "@heroui/react";
+import { usePopup } from "@/contexts/PopupContext";
 
 export default function HeaderSection() {
+  const { openEmailPopup } = usePopup();
+
   return (
     <div className="relative overflow-hidden -mt-24 md:-mt-20 pt-44 w-full">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
@@ -48,6 +53,7 @@ export default function HeaderSection() {
               />
             }
             className="font-semibold font-rethink bg-black mb-10 group"
+            onClick={openEmailPopup}
           >
             Get Early Access
           </Button>
