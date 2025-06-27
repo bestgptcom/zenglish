@@ -1,9 +1,13 @@
+"use client";
+
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import Link from "next/link";
+import { usePopup } from "@/contexts/PopupContext";
 
 export default function CtaSection() {
+  const { openEmailPopup } = usePopup();
+
   return (
     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-10">
       <div className="bg-gradient-to-b from-[#5F09DE] to-[#5e09de5f] text-white rounded-3xl grid md:grid-cols-2 md:gap-10 px-6 sm:px-10 pt-6 sm:pt-14">
@@ -17,8 +21,6 @@ export default function CtaSection() {
           </p>
           <div className="mt-6 md:mt-10">
             <Button
-              as={Link}
-              href="#"
               variant="solid"
               radius="full"
               color="primary"
@@ -29,6 +31,7 @@ export default function CtaSection() {
                 />
               }
               className="font-semibold font-rethink bg-white text-black md:mb-10 group hover:bg-gray-100"
+              onClick={openEmailPopup}
             >
               Get Early Access
             </Button>
