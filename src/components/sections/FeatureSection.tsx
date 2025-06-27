@@ -1,3 +1,5 @@
+"use client";
+
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { Button } from "@heroui/react";
 import Image from "next/image";
@@ -7,7 +9,7 @@ import {
   BsCheck2,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-import Link from "next/link";
+import { usePopup } from "@/contexts/PopupContext";
 
 const features = [
   {
@@ -54,6 +56,8 @@ const features2 = [
 ];
 
 export default function FeatureSection() {
+  const { openEmailPopup } = usePopup();
+
   return (
     <section className="w-full py-20">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-10 px-4 sm:px-6 md:px-8">
@@ -153,13 +157,17 @@ export default function FeatureSection() {
             </div>
             <div className="mt-6">
               <Button
-                as={Link}
-                href="#"
                 variant="bordered"
                 radius="full"
                 color="primary"
-                endContent={<BsArrowRightCircle className="t group-hover:translate-x-1 transition duration-300" size={20} />}
+                endContent={
+                  <BsArrowRightCircle
+                    className="t group-hover:translate-x-1 transition duration-300"
+                    size={20}
+                  />
+                }
                 className="font-semibold font-rethink bg-white border-1 border-[#11111612] text-black mb-10 group hover:bg-gray-100"
+                onClick={openEmailPopup}
               >
                 Get Started Now
               </Button>
@@ -188,13 +196,17 @@ export default function FeatureSection() {
             </p>
             <div className="mt-6">
               <Button
-                as={Link}
-                href="#"
                 variant="bordered"
                 radius="full"
                 color="primary"
-                endContent={<BsArrowRightCircle className="t group-hover:translate-x-1 transition duration-300" size={20} />}
+                endContent={
+                  <BsArrowRightCircle
+                    className="t group-hover:translate-x-1 transition duration-300"
+                    size={20}
+                  />
+                }
                 className="font-semibold font-rethink bg-white border-1 border-[#11111612] text-black mb-10 group hover:bg-gray-100"
+                onClick={openEmailPopup}
               >
                 Get Started Now
               </Button>
